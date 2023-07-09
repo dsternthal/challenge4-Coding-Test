@@ -1,0 +1,28 @@
+:root {
+    --purple:  rgb(75, 0, 105);
+}
+
+.header{
+    color: var(--purple);
+    font-size: 100%;
+}
+
+.timer{
+    text-align: right;
+}
+
+.button{
+    background-color: var(--purple);
+    color:white;
+    display: center;
+}
+
+.hidden{
+    display: none;
+}
+
+.choices{
+    background-color: var(--purple);
+    color:white;
+    display: center;
+}
