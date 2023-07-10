@@ -7,7 +7,6 @@
     font-size: 100%;
     width: 50%; 
     display: flex; 
-    justify-content: end;
 }
 
 .timer{
@@ -30,7 +29,11 @@
     display: center;
 }
 
-#intro-setion, #question-section{
+#intro-setion{
+    text-align: center;
+}
+
+#question-section{
     text-align: center;
 }
 

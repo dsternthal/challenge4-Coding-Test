@@ -7,6 +7,8 @@ var introductionEl = document.querySelector("#intro-section");
 var questionSection = document.querySelector("#question-section");
 var questionEl = document.querySelector("#question");
 var choicesEl  = document.querySelectorAll(".choices");
+var backButton = document.querySelector("#go-back-bt");
+var clearButton = document.querySelector("#clear-btn");
 var secondsLeft = 60;
 var index = 0
 
