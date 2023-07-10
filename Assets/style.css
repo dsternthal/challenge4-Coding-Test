@@ -5,6 +5,9 @@
 .header{
     color: var(--purple);
     font-size: 100%;
+    width: 50%; 
+    display: flex; 
+    justify-content: end;
 }
 
 .timer{
@@ -25,4 +28,12 @@
     background-color: var(--purple);
     color:white;
     display: center;
+}
+
+#intro-setion, #question-section{
+    text-align: center;
+}
+
+#question-section ul{
+    list-style: none;
 }
