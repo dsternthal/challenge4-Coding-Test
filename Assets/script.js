@@ -9,14 +9,15 @@ var questionEl = document.querySelector("#question");
 var choicesEl  = document.querySelectorAll(".choices");
 var backButton = document.querySelector("#go-back-bt");
 var clearButton = document.querySelector("#clear-btn");
-var secondsLeft = 60;
+var gameOver = document.querySelector("#done")
+var secondsLeft = 10;
 var index = 0
 
 //array of objects
 var questions = [
     {
         Title: "Question1",
-        Options: ["option1", "option2", "option3", "option4"],
+        Options: ["option", "option2", "option3", "option4"],
         Answer: "option2"
     },
     {
@@ -49,6 +50,7 @@ function setTime() {
         if (secondsLeft === 0) {
             clearInterval(timerInterval);
             sendMessage();
+            gameOver.setAttribute("class","")
         }
 
     }, 1000);
