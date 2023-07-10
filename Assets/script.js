@@ -22,12 +22,12 @@ var questions = [
     {
         Title: "Question2",
         Options: ["option1", "option2", "option3", "option4"],
-        Answer: "option2"
+        Answer: "option3"
     },
     {
         Title: "Question3",
         Options: ["option1", "option2", "option3", "option4"],
-        Answer: "option2"
+        Answer: "option1"
     },
     {
         Title: "Question4",
