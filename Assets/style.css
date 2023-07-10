@@ -1,5 +1,6 @@
 :root {
     --purple:  rgb(75, 0, 105);
+    --lightPurple: rgb(217, 140, 231);
 }
 
 .header{
@@ -17,6 +18,12 @@
     background-color: var(--purple);
     color:white;
     display: center;
+    border-radius: 20%;
+    font-size: large;
+}
+
+.button:hover{
+    background-color: var(--lightPurple);
 }
 
 .hidden{
@@ -29,7 +36,7 @@
     display: center;
 }
 
-#intro-setion{
+#intro-section{
     text-align: center;
 }
 
