@@ -17,7 +17,7 @@ var index = 0
 var questions = [
     {
         Title: "Question1",
-        Options: ["option", "option2", "option3", "option4"],
+        Options: ["option1", "option2", "option3", "option4"],
         Answer: "option2"
     },
     {
@@ -91,3 +91,5 @@ questionSection.addEventListener("click",function(event){
         showQuestions();
     }
 })
+
+//set timeout

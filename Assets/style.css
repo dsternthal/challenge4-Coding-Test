@@ -36,13 +36,13 @@
     display: center;
 }
 
-#intro-section{
+#intro-section, #done , #question-section{
     text-align: center;
 }
 
-#question-section{
+/* #question-section{
     text-align: center;
-}
+} */
 
 #question-section ul{
     list-style: none;
