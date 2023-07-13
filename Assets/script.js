@@ -6,7 +6,7 @@ var startButton = document.querySelector(".button");
 var introductionEl = document.querySelector("#intro-section");
 var questionSection = document.querySelector("#question-section");
 var questionEl = document.querySelector("#question");
-var choicesEl  = document.querySelectorAll(".choices");
+var choicesEl = document.querySelectorAll(".choices");
 var backButton = document.querySelector("#go-back-bt");
 var clearButton = document.querySelector("#clear-btn");
 var gameOver = document.querySelector("#done")
@@ -51,16 +51,17 @@ function countDown() {
         if (secondsLeft === 0) {
             clearInterval(timerInterval);
             sendMessage();
-            gameOver.setAttribute("class","")
+            gameOver.setAttribute("class", "")
+            questionSection.setAttribute("class","hidden")
         }
 
     }, 1000);
 }
 
-function showQuestions(){
-questionEl.textContent = questions[index].Title;
+function showQuestions() {
+    questionEl.textContent = questions[index].Title;
     for (let i = 0; i < choicesEl.length; i++) {
-        choicesEl[i].textContent=questions[index].Options[i]
+        choicesEl[i].textContent = questions[index].Options[i]
     }
 }
 
@@ -72,18 +73,19 @@ questionEl.textContent = questions[index].Title;
 
 function sendMessage() {
     timeEl.textContent = "OVER";
-    gameOver.setAttribute("class","")
+    gameOver.setAttribute("class", "")
 }
 // THEN the game is over
 // WHEN the game is over
 // THEN I can save my initials and my score
 
-function nextQuestion(){
+function nextQuestion() {
     var element = event.target;
-    if(element.matches("button")){
+    if (element.matches("button")) {
         index++;
         showQuestions();
-}}
+    }
+}
 
 //add event listener goes at the bottom because we want it to load last
 startButton.addEventListener("click", function () {
@@ -93,9 +95,10 @@ startButton.addEventListener("click", function () {
     showQuestions();
 })
 
-questionSection.addEventListener("click",nextQuestion)
+questionSection.addEventListener("click", nextQuestion)
 
-setTimeout(() => { console.log("delayed for 1 second");
+setTimeout(() => {
+    console.log("delayed for 1 second");
 
 }, 1000);
 
