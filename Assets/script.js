@@ -10,7 +10,8 @@ var choicesEl  = document.querySelectorAll(".choices");
 var backButton = document.querySelector("#go-back-bt");
 var clearButton = document.querySelector("#clear-btn");
 var gameOver = document.querySelector("#done")
-var secondsLeft = 10;
+var answerType = document.querySelector("answerType")
+var secondsLeft = 5;
 var index = 0
 
 //array of objects
@@ -42,7 +43,7 @@ var questions = [
     }
 ]
 
-function setTime() {
+function countDown() {
     var timerInterval = setInterval(function () {
         secondsLeft--;
         timeEl.textContent = "Time: " + secondsLeft;
@@ -71,25 +72,32 @@ questionEl.textContent = questions[index].Title;
 
 function sendMessage() {
     timeEl.textContent = "OVER";
+    gameOver.setAttribute("class","")
 }
 // THEN the game is over
 // WHEN the game is over
 // THEN I can save my initials and my score
 
-//add event listener goes at the bottom because we want it to load last
-startButton.addEventListener("click", function () {
-    introductionEl.setAttribute("class", "hidden");
-    questionSection.setAttribute("class", "");
-    setTime();
-    showQuestions();
-})
-
-questionSection.addEventListener("click",function(event){
+function nextQuestion(){
     var element = event.target;
     if(element.matches("button")){
         index++;
         showQuestions();
-    }
+}}
+
+//add event listener goes at the bottom because we want it to load last
+startButton.addEventListener("click", function () {
+    introductionEl.setAttribute("class", "hidden");
+    questionSection.setAttribute("class", "");
+    countDown();
+    showQuestions();
 })
 
+questionSection.addEventListener("click",nextQuestion)
+
+setTimeout(() => { console.log("delayed for 1 second");
+
+}, 1000);
+
 //set timeout
+

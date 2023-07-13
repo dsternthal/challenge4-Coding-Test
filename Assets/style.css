@@ -3,15 +3,20 @@
     --lightPurple: rgb(217, 140, 231);
 }
 
-.header{
+header{
+    display: flex;
+    flex-wrap: wrap;
+}
+.viewScores{
     color: var(--purple);
     font-size: 100%;
-    width: 50%; 
-    display: flex; 
+    width: 50%;
+    display: flex;
 }
 
 .timer{
-    text-align: right;
+    width: 50%;
+    text-align: end;
 }
 
 .button{
@@ -36,6 +41,10 @@
     display: center;
 }
 
+.answerType{
+    font-style: italic;
+}
+
 #intro-section, #done , #question-section{
     text-align: center;
 }
@@ -47,3 +56,4 @@
 #question-section ul{
     list-style: none;
 }
+
